@@ -1,0 +1,24 @@
+<html>
+	<body>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'th_TH'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DF4000004vNdG',
+				'MIAW_Kurngsri_Test1',
+				'https://krungsri--msginapp.sandbox.my.site.com/ESWMIAWKurngsriTest11741580322385',
+				{
+					scrt2URL: 'https://krungsri--msginapp.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://krungsri--msginapp.sandbox.my.site.com/ESWMIAWKurngsriTest11741580322385/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
