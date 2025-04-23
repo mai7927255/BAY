@@ -1,10 +1,14 @@
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<body>
-<script type='text/javascript'>
+<body>
+	<script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.language = 'th'; // For example, enter 'en' or 'en-US'
+			window.addEventListener("onEmbeddedMessagingReady", () => {            
+                		console.log( "Inside Prechat API!!" );
+                		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"ReferrerUri" : "window.location.href", "RecordType" : "Krungsri Non-Voice", "Language" : "Thai", "Origin" : "Live Chat", "Channel" : "Live Chat - Krungsri.com"});
+            		});
 
 			embeddedservice_bootstrap.init(
 				'00DF4000004vNdG',
